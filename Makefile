@@ -6,6 +6,7 @@ update:
 	sh integration.sh update
 
 run:
+	docker network create backend || true
 	sh integration.sh run
 
 show-ip:
