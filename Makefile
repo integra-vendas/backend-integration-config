@@ -1,4 +1,8 @@
 default:
+	make update
+	make run
+
+update:
 	sh integration.sh update
 
 run:
