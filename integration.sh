@@ -47,7 +47,7 @@ function runAll() {
         echo '\n'
         # Local variables
         dir=${directories[$i]}
-        (cd $dir && make run &)
+        (cd $dir && make &)
     done
 }
 

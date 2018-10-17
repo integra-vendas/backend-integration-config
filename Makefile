@@ -2,11 +2,14 @@ default:
 	make update
 	make run
 
+remove-all:
+	docker stop $(docker ps -a -q)
+	docker rm $(docker ps -a -q)
+
 update:
 	sh integration.sh update
 
 run:
-	docker network create backend || true
 	sh integration.sh run
 
 show-ip:
