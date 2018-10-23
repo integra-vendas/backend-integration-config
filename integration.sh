@@ -1,17 +1,25 @@
+LOGIN=master
+API_GATEWAY=master
+PRODUCT=master
+ORDER=master
+NOTIFICATION=master
+
 # load envionment variables
 . .env
 
 # set of services
-directories=('login' 'api-gateway' 'product' 'order')
-branches=($LOGIN $API_GATEWAY $PRODUCT $ORDER)
+directories=('login' 'api-gateway' 'product' 'order' 'notification')
+branches=($LOGIN $API_GATEWAY $PRODUCT $ORDER $NOTIFICATION)
 remotes=('https://github.com/fga-eps-mds/2018.2-FGAPP-login' \
         'https://github.com/fga-eps-mds/2018.2-iFood' \
         'https://github.com/fga-eps-mds/2018.2-FGAPP-produto' \
-        'https://github.com/fga-eps-mds/2018.2-FGAPP-vendas')
+        'https://github.com/fga-eps-mds/2018.2-FGAPP-vendas' \
+        'https://github.com/integra-vendas/Notification-Microservice')
 
 function updateAll() {
+
     ## Update
-    for i in 0 1 2 3
+    for i in 0 1 2 3 4
     do
         echo '\n'
         # Local variables
